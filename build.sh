@@ -8,9 +8,9 @@
             --disable-rlogin     \
             --disable-rsh        \
             --disable-servers
-make -j $SHED_NUMJOBS
-make DESTDIR=${SHED_FAKEROOT} install
-mkdir -v ${SHED_FAKEROOT}/bin
-mv -v ${SHED_FAKEROOT}/usr/bin/{hostname,ping,ping6,traceroute} ${SHED_FAKEROOT}/bin
-mkdir -v ${SHED_FAKEROOT}/sbin
-mv -v ${SHED_FAKEROOT}/usr/bin/ifconfig ${SHED_FAKEROOT}/sbin
+make -j $SHED_NUM_JOBS
+make DESTDIR=${SHED_FAKE_ROOT} install
+mkdir -v ${SHED_FAKE_ROOT}/bin
+mv -v ${SHED_FAKE_ROOT}/usr/bin/{hostname,ping,ping6,traceroute} ${SHED_FAKE_ROOT}/bin
+mkdir -v ${SHED_FAKE_ROOT}/sbin
+mv -v ${SHED_FAKE_ROOT}/usr/bin/ifconfig ${SHED_FAKE_ROOT}/sbin
